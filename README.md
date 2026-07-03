@@ -20,6 +20,10 @@ To generate a piston bolt network you first need to map all the stations in your
 - applies an optional X/Z coordinate multiplier (default `1/8` for Overworld → Nether scale)
 - parallel region scanning across CPU cores
 
+<p align="center">
+  <img src="assets/output-example.webp" alt="img" style="width:74%;" onerror="this.style.display='none';">
+</p>
+
 ## Minecraft version support
 
 | Era | Support |
@@ -122,6 +126,6 @@ uv run pyright
   <img src="https://contrib.rocks/image?repo=KK-mp4/portal-location-parser" alt="GitHub contributors" />
 </a>
 
-## [License](https://github.com/KK-mp4/portal-location-parser/blob/master/LICENSE.md)
+## [License](https://github.com/KK-mp4/portal-location-parser/blob/main/LICENSE.md)
 
 This program is licensed under the MIT License. Please read the License file to know about the usage terms and conditions.

@@ -29,7 +29,7 @@ A quick list of things to keep in mind as you're making changes:
 - As you make changes
   - Make your changes in a forked repo (instead of making a branch on the main repo)
   - [Sign your commits](#23-signing-off-commits) as you go
-  - Rebase from master instead of using `git pull` on your PR branch
+  - Rebase from main instead of using `git pull` on your PR branch
 - When you make the PR
   - Make a PR from the forked repo you made
   - Ensure the title of the PR matches [semantic release conventions](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13) (e.g. start with `feat:` or `fix:` or `ci:` or `chore:` or `docs:`)
@@ -58,9 +58,9 @@ Then, you can sign off commits with the `-s` flag:
 git commit -s -m "My first commit"
 ```
 
-### 2.4. Incorporating upstream changes from master
+### 2.4. Incorporating upstream changes from main
 
-Use `git rebase [master]` instead of `git merge` : `git pull -r`.
+Use `git rebase [main]` instead of `git merge` : `git pull -r`.
 
 Note that this means if you are midway through working through a PR and rebase, you'll have to force push:
 
@@ -71,14 +71,14 @@ git push --force-with-lease origin [branch name]
 Keep your fork up to date and rebase your branch:
 
 ```bash
-# Ensure local master is up-to-date with upstream
-git checkout master
+# Ensure local main is up-to-date with upstream
+git checkout main
 git fetch upstream
-git rebase upstream/master
+git rebase upstream/main
 
-# Switch back to your branch and rebase from updated master
+# Switch back to your branch and rebase from updated main
 git checkout my-feature-branch
-git rebase master
+git rebase main
 
 # Resolve conflicts if any, then push
 git push --force-with-lease origin my-feature-branch
