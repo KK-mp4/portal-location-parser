@@ -1,0 +1,77 @@
+[project]
+name = 'portal-location-parser'
+version = '0.1.0'
+description = 'Python tool for finding nether portal locations in a given world save file'
+readme = 'README.md'
+
+requires-python = '>=3.13'
+
+dependencies = [
+    "anvil-parser2>=0.10.6,<0.11.0",
+    "numpy>=2.5.0,<3.0.0",
+]
+
+[dependency-groups]
+dev = [
+    'ipykernel>=7.3.0,<8.0.0',
+    'matplotlib>=3.11.0,<4.0.0',
+    'pre-commit>=4.6.0,<5.0.0',
+    'pyright>=1.1.411,<2.0.0',
+    'ruff>=0.15.20,<0.16.0',
+]
+
+[tool.uv]
+package = false
+add-bounds = 'major'
+
+[tool.ruff]
+exclude = [
+    '__pycache__',
+    '.git',
+    '.ruff_cache',
+    '.venv',
+    '.vscode',
+    'output',
+    'saves',
+]
+fix = true
+indent-width = 4
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+    'ANN',
+    'B',
+    'E',
+    'F',
+    'I',
+    'T',
+]
+fixable = ['ALL']
+ignore = [
+    'E501',
+    'T201',
+]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+
+[tool.ruff.lint.pydocstyle]
+convention = 'google'
+
+[tool.ruff.format]
+quote-style = 'single'
+docstring-code-format = true
+
+[tool.pyright]
+include = [
+    'notebooks',
+    'src/',
+]
+typeCheckingMode = 'basic'
+pythonVersion = '3.13'
+venvPath = '.'
+venv = '.venv'
+extraPaths = [
+    '.venv/lib/python3.13/site-packages',
+]
